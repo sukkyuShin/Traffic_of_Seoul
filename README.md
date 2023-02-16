@@ -107,3 +107,62 @@ plt.ylabel('traffic')
 plt.show()
 ```
 ![TrafficOfWeek](https://user-images.githubusercontent.com/113449058/219298757-15aed1ed-f584-4cdd-880b-05864ba30156.png)
+```
+2023년 2월 5일부터 2023년 2월 11일까지의 1주간 데이터입니다.
+8번째 image는 1주일간 총 교통량을 시각화한 그래프입니다.
+```
+## 2. 서울 교통량 분석
+```python
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+
+f1=open('C:\python\day8\\traffic\mon_traffic.csv','r',encoding="cp949")
+data1=csv.reader(f1)
+next(data1,None)
+MonTraffic = []
+for row in data1:
+    if int(row[2]) == 101:
+        MonTraffic.append(int(row[13]))
+
+def list_chunk(lst, n):
+    return [lst[i:i+n] for i in range(0, len(lst), n)]
+
+MonTraffic = list_chunk(MonTraffic,4)
+MonTraffic = np.array(MonTraffic)
+MonTraffic = np.sum(MonTraffic,axis=1)
+
+plt.subplot(2,1,1)
+plt.plot(MonTraffic)
+plt.title('traffic of time (seoul, day2)')
+plt.xlabel('time')
+plt.ylabel('traffic')
+
+#-----------------------------------------------------------------------
+
+f1=open('C:\python\day8\\traffic\\fri_traffic.csv','r',encoding="cp949")
+data1=csv.reader(f1)
+next(data1,None)
+FriTraffic = []
+for row in data1:
+    if int(row[2]) == 101:
+        FriTraffic.append(int(row[13]))
+
+def list_chunk(lst, n):
+    return [lst[i:i+n] for i in range(0, len(lst), n)]
+
+FriTraffic = list_chunk(FriTraffic,4)
+FriTraffic = np.array(FriTraffic)
+FriTraffic = np.sum(FriTraffic,axis=1)
+
+plt.subplot(2,1,2)
+plt.plot(FriTraffic)
+plt.title('traffic of time (seoul, day6)')
+plt.xlabel('time')
+plt.ylabel('traffic')
+plt.show()
+```
+```
+수도권 중 가장 많은 교통량을 보인 서울을 중심으로 데이터를 분석했습니다.
+1주간 총 교통량 그래프의 상승폭이 큰 두 요일을 선정했습니다.(월,금)
+```
