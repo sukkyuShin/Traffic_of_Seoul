@@ -191,3 +191,8 @@ SeoulRank = {1:Rank1[0],2:Rank1[1],3:Rank1[2],4:Rank1[3],5:Rank1[4]}
 for i in range(len(SeoulRank)):
         print(SeoulRank[i+1])
 ```
+![rank1](https://user-images.githubusercontent.com/113449058/219301740-794945fb-4c30-43ea-b0ae-1fdb0a68ae64.png)
+```
+서울 만남의 광장 휴게소(2023년 1월)의 매출 순위 입니다.
+위에서부터 차례대로 1위 입니다.
+```
