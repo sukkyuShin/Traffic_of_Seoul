@@ -106,3 +106,4 @@ plt.xlabel('day of week')
 plt.ylabel('traffic')
 plt.show()
 ```
+![TrafficOfWeek](https://user-images.githubusercontent.com/113449058/219298757-15aed1ed-f584-4cdd-880b-05864ba30156.png)
