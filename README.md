@@ -162,7 +162,9 @@ plt.xlabel('time')
 plt.ylabel('traffic')
 plt.show()
 ```
+![TrafficOfDay](https://user-images.githubusercontent.com/113449058/219300212-c2a63ddc-e2db-4f82-8c75-d2886bf88d7b.png)
 ```
 수도권 중 가장 많은 교통량을 보인 서울을 중심으로 데이터를 분석했습니다.
 1주간 총 교통량 그래프의 상승폭이 큰 두 요일을 선정했습니다.(월,금)
+월,금의 1시간 단위 교통량 그래프입니다.
 ```
