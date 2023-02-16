@@ -168,5 +168,26 @@ plt.show()
 수도권 중 가장 많은 교통량을 보인 서울을 중심으로 데이터를 분석했습니다.
 1주간 총 교통량 그래프의 상승폭이 큰 두 요일을 선정했습니다.(월,금)
 월,금의 1시간 단위 교통량 그래프입니다.
-시각화를 통해 05시 ~ 10시, 13시 ~ 17시까지 교통량이 많은 것을 확인할 수 있었습니다.
+시각화를 통해 06시 ~ 10시, 13시 ~ 17시까지 교통량이 많은 것을 확인할 수 있었습니다.
+```
+## 3. 서울 만남의 광장 휴게소 매출 순위
+```python
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+
+f1=open('C:\python\day8\\traffic\\foodrank.csv','r',encoding="cp949")
+data1=csv.reader(f1)
+next(data1,None)
+Rank1 = []
+for row in data1:
+    if row[3].startswith('서울만남'):
+        Rank1.append(row[5:8:2])
+
+
+SeoulRank = {1:Rank1[0],2:Rank1[1],3:Rank1[2],4:Rank1[3],5:Rank1[4]}
+
+
+for i in range(len(SeoulRank)):
+        print(SeoulRank[i+1])
 ```
